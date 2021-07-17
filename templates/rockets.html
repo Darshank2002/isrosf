@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block script %}
+<link rel="stylesheet" href="../static/css/rockets.css" />{% endblock script %}
+{%block title %}ISRO Rockets{% endblock title %} {%block body %}
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <h1><span class="badge">ISRO Rockets</span></h1>
+  </div>
+</div>
+<div class="container">
+  <div class="row justify-content-center" id="allRockets">
+    <h4>Click on any Launch Vehicle to Know More</h4>
+    <img src="../static/assets/rocketsAll.png" alt="All ISRO Rockets" height="600px" usemap="#rockets" />
+    <map name="rockets">
+      <area shape="rect" coords="60,150,80,400" href="glsvmk2" alt="">
+      <area shape="rect" coords="150,90,190,400" href="pslv" alt="">
+      <area shape="rect" coords="240,50,320,400" href="gslvmk2" alt="">
+      <area shape="rect" coords="380,80,460,400" href="pslv" alt="">
+      <area shape="rect" coords="545,150,600,400" href="gslvmk2" alt="">
+      <area shape="rect" coords="660,10,750,400" href="pslv" alt="">
+    </map>
+  </div>
+
+</div>
+{%endblock body %}

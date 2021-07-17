@@ -1,0 +1,43 @@
+{% extends 'base.html' %} {% block script %}<link
+  rel="stylesheet"
+  href="/static/css/style.css"
+/>{% endblock script %} {%block title %}ISRO NEWS{% endblock title %}
+{%block body %}
+    <div class="container">
+      <div class="row justify-content-center">
+        <h2><span class="badge">ISRO NEWS</span></h2>
+      </div>
+    </div>
+    <div class="container" id="News">
+      <div class="row justify-content-center my-4">
+        {% for ar in article %}
+        <div class="col col-md-5 my-3">
+          <div class="card" id="singleNews">
+            <div class="card-header">
+              <img
+                src="{{ar.urlToImage}}"
+                alt=""
+                height="30px"
+                style="border-radius: 10px"
+              />
+              {{ar.source.name}}
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">{{ar.title}}</h5>
+              <a
+                href="{{ar.url}}"
+                class="btn btn-primary"
+                id="ReadMore"
+                target="_blank"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+{% endblock body %}

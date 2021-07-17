@@ -1,0 +1,242 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow-x: hidden;
+    color: white;
+
+
+}
+
+
+
+.inner-section{
+    margin:325px auto;
+    justify-content: center;
+    
+    text-align: center;
+    animation: fadeInHead 2s;
+}
+
+.inner-section h1{
+font-size: 5vw;
+}
+
+.inner-section h3{
+    font-size: 2vw;
+    
+}
+
+#mainBG{
+    height: 100%;
+    width: 100%;
+ 
+    background-size: cover;
+    position: absolute;
+    margin: 0;
+    padding:  0;
+    background-color: #000;
+    background-position: center center;
+    background-repeat: no-repeat;
+    animation: fadeInBG 2s;
+
+
+
+}
+
+
+.animate{
+    opacity: 0;
+}
+
+ h1{
+    text-shadow: 0px 0px 10px #000;
+    font-size: 70px;
+    
+
+}
+h3{
+    text-shadow: 0px 0px 10px #000;
+    font-size: 30px;
+}
+
+#rocketInfo{
+    margin: 300px auto;
+}
+#rocketInfo p{
+    font-size: 20px;
+}
+#Anim{
+    position: sticky;
+}
+
+.nav-tabs{
+    border-bottom: none;
+}
+.nav-tabs a.nav-item{
+border-radius: 0.25rem;
+}
+
+
+.table#overview td{
+    border-top: none;
+    border-bottom: 1px solid #dee2e6;
+    padding: 25px 12px;
+}
+
+.table#overview th {
+    border-top: none;
+    border-bottom: 1px solid #dee2e6;
+    padding: 25px 12px;
+}
+
+#stageImg img{
+    border-radius: 25px;
+    box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.521);
+
+}
+
+
+@keyframes fadeInHead {
+    from{
+
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    
+}
+
+@keyframes fadeInBG {
+    from{
+
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
+
+a{
+    color: rgb(172, 172, 172);
+}
+
+a:hover{
+    color: rgb(255, 255, 255);
+
+}
+.nav-tabs .nav-link{
+    border: none; 
+}
+
+
+#variantImg{
+    height: 600px;
+    border-radius: 25px;
+}
+
+#rocketStats h1{
+font-size: 6vw;
+
+}
+
+#rocketStats h3{
+    font-size: 2vw;
+    font-weight: 100;
+    }
+
+@media only screen and (max-width: 768px) {  
+    #rocketStats h1{
+        font-size: 10vw;
+        }
+        
+        #rocketStats h3{
+            font-size: 4vw;
+        } 
+    #Anim{
+        display: none;
+    }
+    .inner-section h1{
+        font-size: 8vw;
+        }
+        
+    .inner-section h3{
+            font-size: 4vw;
+            
+        }    
+    .inner-section{
+        margin: 325px auto 300px auto;
+
+    }
+    #rocketInfo {
+        margin: 150px auto;
+    }
+    #rocketInfo p{
+        font-size: 12px;
+    }
+
+    .navStage h2{
+        font-size: 6vw;
+    }
+    .navStage h5{
+        font-size: 4vw;
+    }
+    table{
+        font-size: 4vw;        
+    }
+    
+    .table#overview td{
+        padding: 15px 12px;
+    }
+    
+    .table#overview th {
+
+        padding: 15px 12px;
+    }
+    .Stages a{
+        font-size: 12px;
+    }
+    #stageInfo{
+        order: 2;
+    }
+    #stageImg{
+        margin: 20px 0px;
+        order: 1;
+    }
+    #variantImg{
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+    #stageImg img{
+        border-radius: 25px;
+        box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.521);
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+    }
+    
+    .video-container {
+        overflow: hidden;
+        position: relative;
+        width:100%;
+    }
+    
+    .video-container::after {
+        padding-top: 56.25%;
+        display: block;
+        content: '';
+    }
+    
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }    

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/static/css/pslv.css" />
+    <title>{{rocket.rocket_name}}</title>
+  </head>
+
+  <body>
+    <div
+      class="container-fluid"
+      id="mainBG"
+      style="background-image: url(/media/{{rocket.rocket_thumb}})"
+    >
+      <div class="inner-section justify-content-center">
+        <h1
+          class="animate"
+          style="
+            visibility: inherit;
+            opacity: 1;
+            transform: translate3d(0px, 0px, 0px);
+          "
+        >
+          {{rocket.rocket_name}}
+        </h1>
+        <h3>{{rocket.rocket_subheading}}</h3>
+      </div>
+
+      <div class="row justify-content-center" id="rocketStats">
+        <div class="col-3 col-md-2 text-center mx-md-4">
+          <h1>{{rocket.rocket_stat1_value}}</h1>
+          <h3>{{rocket.rocket_stat1_name}}</h3>
+        </div>
+        <div class="col-3 col-md-2 text-center mx-md-4">
+          <h1>{{rocket.rocket_stat2_value}}</h1>
+          <h3>{{rocket.rocket_stat2_name}}</h3>
+        </div>
+        <div class="col-3 col-md-2 text-center mx-md-4">
+          <h1>{{rocket.rocket_stat3_value}}</h1>
+          <h3>{{rocket.rocket_stat3_name}}</h3>
+        </div>
+      </div>
+
+      <div class="row mx-4" id="rocketInfo">
+        <div class="col-12 col-md-6 px-4 align-self-center">
+          <p>{{rocket.rocket_info}}</p>
+        </div>
+        <div class="col-10 col-md-6" id="Anim">
+          <div class="sketchfab-embed-wrapper">
+            {{rocket.rocket_render|safe}}
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center"></div>
+      <div
+        class="py-5"
+        style="background-color: rgba(240, 248, 255, 0.205)"
+        id=""
+      >
+        <nav class="">
+          <div
+            class="nav nav-tabs justify-content-center"
+            id="nav-tab"
+            role="tablist"
+          >
+            <a
+              class="nav-item nav-link active"
+              id="nav-overview-tab"
+              data-toggle="tab"
+              href="#nav-overview"
+              role="tab"
+              aria-controls="nav-home"
+              aria-selected="true"
+              >Overview</a
+            >
+            <a
+              class="nav-item nav-link"
+              id="nav-stages-tab"
+              data-toggle="tab"
+              href="#nav-stages"
+              role="tab"
+              aria-controls="nav-profile"
+              aria-selected="false"
+              >Stages</a
+            >
+            <a
+              class="nav-item nav-link"
+              id="nav-variants-tab"
+              data-toggle="tab"
+              href="#nav-variants"
+              role="tab"
+              aria-controls="nav-contact"
+              aria-selected="false"
+              >Variants</a
+            >
+          </div>
+        </nav>
+        <div class="tab-content m-2 m-md-5" id="nav-tabContent r-info">
+          <div
+            class="tab-pane fade show active"
+            id="nav-overview"
+            role="tabpanel"
+            aria-labelledby="nav-overview-tab"
+          >
+            <h2 class="text-center m-5">Overview</h2>
+            <div class="row justify-content-center">
+              <div class="col-12 col-md-5">
+                <table class="table" id="overview">
+                  <thead>
+                    <tr>
+                      <th scope="col">Height</th>
+                      <th scope="col">{{rocket.rocket_height}} m</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Diameter</th>
+                      <td>{{rocket.rocket_dia}} m</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Number of Stages</th>
+                      <td>{{rocket.rocket_stages}}</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Liftoff Mass</th>
+                      <td>{{rocket.rocket_lf_mass}} tonnes (XL)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Payload to SSPO</th>
+                      <td>{{rocket.rocket_leo}} kg</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Payload to Sub GTO</th>
+                      <td>{{rocket.rocket_gto}} kg</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-12 col-md-5 text-center">
+                <img
+                  src="/media/{{rocket.rocket_overview_thumb}}"
+                  alt=""
+                  height="500px"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="nav-stages"
+            role="tabpanel"
+            aria-labelledby="nav-stages-tab"
+          >
+            <h2 class="text-center mt-4 mt-md-0">Stages</h2>
+
+            <nav class="Stages">
+              <div
+                class="nav nav-tabs justify-content-center"
+                id="nav-tab"
+                role="tablist"
+              >
+                <a
+                  class="nav-item nav-link active"
+                  id="nav-stage1-tab"
+                  data-toggle="tab"
+                  href="#nav-stage1"
+                  role="tab"
+                  aria-controls="nav-stage1"
+                  aria-selected="true"
+                  >{{rocket.rocket_stage1_menu_name}}</a
+                >
+                <a
+                  class="nav-item nav-link"
+                  id="nav-stage2-tab"
+                  data-toggle="tab"
+                  href="#nav-stage2"
+                  role="tab"
+                  aria-controls="nav-stage2"
+                  aria-selected="true"
+                  >{{rocket.rocket_stage2_menu_name}}</a
+                >
+                <a
+                  class="nav-item nav-link"
+                  id="nav-stage3-tab"
+                  data-toggle="tab"
+                  href="#nav-stage3"
+                  role="tab"
+                  aria-controls="nav-stage3"
+                  aria-selected="true"
+                  >{{rocket.rocket_stage3_menu_name}}</a
+                >
+                <a
+                  class="nav-item nav-link"
+                  id="nav-stage4-tab"
+                  data-toggle="tab"
+                  href="#nav-stage4"
+                  role="tab"
+                  aria-controls="nav-stage4"
+                  aria-selected="true"
+                  style="display: {{rocket.rocket_stage4_show}};"
+                  >{{rocket.rocket_stage4_menu_name}}</a
+                >
+              </div>
+            </nav>
+            <div class="tab-content m-2 m-md-5" id="nav-tabContent r-info">
+              <div
+                class="tab-pane fade show active navStage"
+                id="nav-stage1"
+                role="tabpanel"
+                aria-labelledby="nav-stage1-tab"
+              >
+                <div class="row justify-content-center">
+                  <div class="col-12 col-md-5" id="stageInfo">
+                    <h2>{{rocket.rocket_stage1_name}}</h2>
+                    <h5>{{rocket.rocket_stage1_info}}</h5>
+                    <table class="table" id="overview">
+                      <thead>
+                        <tr>
+                          <th scope="col">Engine</th>
+                          <th scope="col">{{rocket.rocket_stage1_engine}}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">Fuel</th>
+                          <td>{{rocket.rocket_stage1_fuel}}</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Max Thrust</th>
+                          <td>{{rocket.rocket_stage1_maxThrust}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="col-12 col-md-5 text-center" id="stageImg">
+                    <img
+                      src="/media/{{rocket.rocket_stage1_thumb}}"
+                      alt=""
+                      height="400px"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade show navStage"
+                id="nav-stage2"
+                role="tabpanel"
+                aria-labelledby="nav-stage2-tab"
+              >
+                <div class="row justify-content-center">
+                  <div class="col-12 col-md-5" id="stageInfo">
+                    <h2>{{rocket.rocket_stage2_name}}</h2>
+                    <h5>{{rocket.rocket_stage2_info}}</h5>
+                    <table class="table" id="overview">
+                      <thead>
+                        <tr>
+                          <th scope="col">Engine</th>
+                          <th scope="col">{{rocket.rocket_stage2_engine}}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">Fuel</th>
+                          <td>{{rocket.rocket_stage2_fuel}}</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Max Thrust</th>
+                          <td>{{rocket.rocket_stage2_maxThrust}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="col-12 col-md-5 text-center" id="stageImg">
+                    <img
+                      src="/media/{{rocket.rocket_stage2_thumb}}"
+                      alt=""
+                      height="400px"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade show navStage"
+                id="nav-stage3"
+                role="tabpanel"
+                aria-labelledby="nav-stage3-tab"
+              >
+                <div class="row justify-content-center">
+                  <div class="col-12 col-md-5" id="stageInfo">
+                    <h2>{{rocket.rocket_stage3_name}}</h2>
+                    <h5>{{rocket.rocket_stage3_info}}</h5>
+                    <table class="table" id="overview">
+                      <thead>
+                        <tr>
+                          <th scope="col">Engine</th>
+                          <th scope="col">{{rocket.rocket_stage3_engine}}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">Fuel</th>
+                          <td>{{rocket.rocket_stage3_fuel}}</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Max Thrust</th>
+                          <td>{{rocket.rocket_stage3_maxThrust}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="col-12 col-md-5 text-center" id="stageImg">
+                    <img
+                      src="/media/{{rocket.rocket_stage3_thumb}}"
+                      alt=""
+                      height="400px"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade show navStage"
+                id="nav-stage4"
+                role="tabpanel"
+                aria-labelledby="nav-stage4-tab"
+              >
+                <div class="row justify-content-center">
+                  <div class="col-12 col-md-5" id="stageInfo">
+                    <h2>{{rocket.rocket_stage4_name}}</h2>
+                    <h5>{{rocket.rocket_stage4_info}}</h5>
+                    <table class="table" id="overview">
+                      <thead>
+                        <tr>
+                          <th scope="col">Engine</th>
+                          <th scope="col">{{rocket.rocket_stage4_engine}}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">Fuel</th>
+                          <td>{{rocket.rocket_stage4_fuel}}</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Max Thrust</th>
+                          <td>{{rocket.rocket_stage4_maxThrust}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="col-12 col-md-5 text-center" id="stageImg">
+                    <img
+                      src="/media/{{rocket.rocket_stage4_thumb}}"
+                      alt=""
+                      height="400px"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="nav-variants"
+            role="tabpanel"
+            aria-labelledby="nav-variants-tab"
+          >
+            <div class="row justify-content-center">
+              <img
+                src="/media/{{rocket.rocket_variant_thumb}}"
+                alt=""
+                id="variantImg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <h2 class="p-5" style="text-transform: uppercase">
+            {{rocket.rocket_code}} Latest Launch
+          </h2>
+          <div class="video-container">{{rocket.rocket_launchVideo|safe}}</div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

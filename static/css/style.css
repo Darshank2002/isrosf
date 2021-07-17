@@ -1,0 +1,461 @@
+/*ISRO COLORS 
+Pumpkin (#F47216) and Rich Electric Blue (#0E88D3). */
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    /* background-color: rgb(152, 214, 255); */
+    background-color: rgba(0, 0, 0, 0.452);
+    background-image: url("/static/assets/bg2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+
+    html,
+    body {
+        /* background-color: rgb(152, 214, 255); */
+        background-image: url("/static/assets/bg2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+#MainLogo {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
+
+#nav a {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* #Nav2 nav {
+    background-color: #0023452e;
+    border-radius: 20px;
+}
+
+#Nav2 nav a {
+    font-weight: 500;
+    color: #62a6d1;
+    border-right-style: solid;
+    border-right-width: 0.5px;
+}
+
+#Nav2 nav a#first {
+    font-weight: 500;
+    color: #62a6d1;
+    border-left-style: solid;
+    border-left-width: 0.5px;
+    border-right-style: solid;
+    border-right-width: 0.5px;
+}
+
+#Nav2 nav a:hover,
+#Nav2 nav a#first:hover {
+    font-weight: 500;
+    color: #e7a678;
+} */
+
+a#left {
+    width: 250px;
+    height: 60px;
+    background: linear-gradient(270deg, #6CB5FA 0%, #0658A4 100%);
+    border: 3px solid #8DC7FC;
+    border-radius: 10px;
+}
+
+a#right {
+    width: 250px;
+    height: 60px;
+    background: linear-gradient(270deg, #0658A4 0%, #6CB5FA 100%);
+    border: 3px solid #8DC7FC;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+#explore {
+    width: 200px;
+    height: 200px;
+    background-image: url("../assets/officialLogo.png");
+    background-size: cover;
+    background-color: rgba(2, 63, 119, 0.856);
+
+    box-shadow: 0px 0px 19px rgba(2, 41, 77, 0.5);
+    border-radius: 50%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #fcb684;
+    transition: 1s;
+}
+
+#explore:hover {
+    width: 200px;
+    height: 200px;
+    background-image: url("../assets/Explore.png");
+    background-size: contain;
+    background-color: rgba(1, 24, 58, 0.932);
+    box-shadow: 0px 0px 19px rgba(6, 88, 164, 0.5);
+    border-radius: 50%
+}
+
+.ex {
+    margin-top: 150px;
+}
+
+#stats {
+    margin-top: 180px;
+    margin-bottom: 220px;
+
+}
+
+.badge {
+    background: rgb(252, 229, 143);
+    background: linear-gradient(43deg, rgba(252, 229, 143, 1) 20%, rgba(252, 198, 0, 1) 86%);
+}
+
+#stats h1 {
+    font-size: 3.255vw;
+    color: #00466b;
+}
+
+
+
+
+#stats #statsBox {
+    margin: 60px;
+    margin-top: 220px;
+    padding: 30px;
+    border-radius: 25px;
+    background-color: rgba(123, 202, 255, 0.973);
+}
+
+#stats #SingleStatsBox {
+    text-align: center;
+    align-self: center;
+    padding: 15px;
+    margin: 0px 20px;
+    border-radius: 25px;
+    background-color: rgba(248, 248, 248, 0.973);
+    transition: 0.3s;
+}
+
+#stats #SingleStatsBox:hover {
+
+    background-color: rgba(248, 248, 248, 0.973);
+    box-shadow: 0px 0px 15px rgb(53, 86, 109);
+}
+
+
+#launchVehicles h1 {
+    font-size: 50px;
+    color: #00466b;
+}
+
+#fleet {
+    margin: 60px;
+    padding: 30px;
+    border-radius: 25px;
+    background-color: rgba(123, 202, 255, 0.973);
+}
+
+#fleet img {
+    border-radius: 25px;
+    box-shadow: 5px 5px 15px rgb(35, 56, 71);
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
+
+
+@media only screen and (max-width: 600px) {}
+
+
+#CardColumn {
+    justify-content: center;
+}
+
+#missionTempCard {
+
+    margin: 20px;
+    transition: 0.2s ease-in-out;
+    width: 22rem;
+    border-radius: 20px;
+}
+
+#missionTempCard:hover {
+
+    box-shadow: 0px 0px 30px rgba(0, 10, 44, 0.445);
+}
+
+#missionTempCard .card-body {
+    padding-bottom: 0px;
+    color: #663009;
+}
+
+#missionTempCard img {
+    height: 100%;
+    max-height: 240px;
+    width: auto;
+    border-bottom-style: solid;
+    border-width: 7px;
+    border-color: #F47216;
+    border-radius: 20px;
+}
+
+#missionTempCard #knowMoreBtn {
+    color: #d1edff;
+    background-color: #0E88D3;
+}
+
+
+#MissionPage #MissionTitle {
+    margin: 20px 10px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 0px;
+
+}
+
+#MissionPage #MissionTitle img {
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 30px;
+    border-left-style: solid;
+    border-width: 7px;
+    border-color: #F47216;
+}
+
+
+#MissionPage #MissionTime {
+    margin: 20px 10px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 40px 20px;
+}
+
+#MissionPage #MissionTime img {
+    height: 90px;
+}
+
+#MissionContent {
+    margin: 30px auto;
+    background-color: white;
+    border-radius: 30px;
+    padding: 20px 30px;
+}
+
+#MissionContent #SingleImage {
+    padding: 0px;
+    margin: 20px;
+    max-height: 250px;
+    max-width: 250px;
+
+
+}
+
+
+#MissionContent #SingleImage img {
+    max-height: inherit;
+    width: inherit;
+    object-fit: cover;
+    border-radius: 20px;
+
+
+}
+
+#MissionContent #SingleImage img:hover {
+
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+#MissionContent .mInfo {
+    color: rgb(69, 76, 88);
+    border-radius: 30px;
+    margin: 5px 10px;
+    background-color: rgb(199, 219, 255);
+    padding: 20px;
+    align-self: center;
+}
+
+#MissionContent #LinkCard {
+    color: rgb(69, 76, 88);
+    border-radius: 30px;
+    margin: 5px 10px;
+    background-color: rgb(199, 219, 255);
+    padding: 20px;
+    align-self: center;
+    text-align: center;
+}
+
+
+#variantImg {
+    height: 250px;
+    border-radius: 25px;
+}
+
+#MissionsCat h1 {
+    font-size: 2vw;
+}
+
+#MissionsCat h1#Title {
+    font-size: 3vw;
+}
+
+#MissionsCat a {
+    color: #0E88D3;
+    transition: 0.2s ease-in-out;
+}
+
+#MissionsCat a:hover {
+    color: #F47216;
+    text-decoration: none;
+
+}
+
+
+/* NEWS */
+
+#News #singleNews .card-header {
+    background-color: #ffe9da;
+}
+
+#News #singleNews #ReadMore {
+    background-color: #0E88D3;
+}
+
+
+@media only screen and (max-width: 768px) {
+    #stats h1 {
+        font-size: 10vw;
+        color: #00466b;
+    }
+
+    #launchVehicles h1 {
+        font-size: 9vw;
+        color: #00466b;
+    }
+
+    #stats #statsBox {
+        margin: 30px 10px;
+        padding: 5px;
+        border-radius: 25px;
+        background-color: rgba(123, 202, 255, 0.973);
+    }
+
+    #stats #statsBox h1 {
+        font-size: 10vw;
+    }
+
+    #stats #statsBox h5 {
+        font-size: 4vw;
+    }
+
+    #stats #statsBox #SingleStatsBox {
+        margin: 10px;
+    }
+
+    #fleet {
+        margin: 15px;
+        padding: 5px;
+        border-radius: 25px;
+        background-color: rgba(123, 202, 255, 0.973);
+
+    }
+
+    #fleet .col-10.col-md-8 {
+        padding: 0px;
+        margin: 10px;
+    }
+
+    #fleet h3 {
+        font-size: 5vw;
+        margin-top: 15px;
+    }
+
+    #stats {
+        margin-top: 160px;
+        margin-bottom: 50px;
+
+    }
+
+    #MissionsCat h1 {
+        font-size: 5vw;
+    }
+
+    #MissionsCat h1#Title {
+        font-size: 10vw;
+    }
+
+    #MissionsCat #cat {
+        align-self: center;
+        padding: 20px;
+        margin: 5px;
+
+    }
+
+    #missionTempCard {
+
+
+        width: 16rem;
+        border-radius: 20px;
+    }
+
+    #MissionPage #MissionTime img {
+        height: 50px;
+    }
+
+    #MissionPage #MissionTime h4 {
+        font-size: 3.5vw;
+        overflow-wrap: break-word;
+    }
+
+    #MissionTime #SingleMissionFlag {
+        align-self: center;
+    }
+
+    #MissionPage #MissionTime {
+        margin: 0px;
+    }
+
+    #MissionContent #SingleImage {
+        padding: 5px;
+        margin: 5px;
+        height: 100px;
+        width: 100px;
+
+
+    }
+
+    /* #MissionContent #SingleImage img{
+
+    } */
+    #MissionPage #MissionTitle img {
+        max-height: 250px;
+        object-fit: cover;
+        border-radius: 30px;
+        border-top-style: solid;
+        border-left-style: none;
+        border-width: 7px;
+        border-color: #F47216;
+    }
+
+    #MissionTime {
+        border-bottom-style: solid;
+        border-width: 7px;
+        border-color: #0E88D3;
+    }
+}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block script %}
+<link rel="stylesheet" href="/static/css/style.css" />{% endblock script %}
+{%block title %}ISRO Missions{% endblock title %} {% block body %}
+<div class="container" id="MissionsCat">
+  <div class="row justify-content-center my-5">
+    <h1 id="Title"><span class="badge">ISRO Missions</span></h1>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-5 col-md-3 p-md-5 m-md-3" style="background-color: white; border-radius: 20px" id="cat">
+      <h1 class="text-center"><a href="leo">LEO</a></h1>
+    </div>
+
+    <div class="col-5 col-md-3 p-md-5 m-md-3" style="background-color: white; border-radius: 20px" id="cat">
+      <h1 class="text-center"><a href="geo">GEO</a></h1>
+    </div>
+    <div class="col-5 col-md-3 p-md-5 m-md-3" style="background-color: white; border-radius: 20px" id="cat">
+      <h1 class="text-center"><a href="interplanetary">Interplanetary</a></h1>
+    </div>
+    <div class="col-5 col-md-3 p-md-5 m-md-3" style="background-color: white; border-radius: 20px" id="cat">
+      <h1 class="text-center"><a href="human">Human Space Flight</a></h1>
+    </div>
+  </div>
+</div>
+{% endblock body %}

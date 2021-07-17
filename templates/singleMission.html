@@ -1,0 +1,132 @@
+{% extends 'base.html' %} {% block script %}<link
+  rel="stylesheet"
+  href="/static/css/style.css"
+/>{% endblock script %} {%block title %}{{mission.mission_title}} {% endblock title %}{%block body %}
+<div class="container" id="MissionPage">
+  <div class="row justify-content-center">
+    <div class="col-11 col-md-7 mr-md-4" id="MissionTitle">
+      <div
+        id="carouselExampleControls"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <div class="carousel-inner">
+          {% for image in images %}
+          <div
+            class="
+              carousel-item
+              {%if forloop.counter0 == 0 %}
+              active
+              {%endif %}
+            "
+          >
+            <img
+              class="d-block w-100"
+              src="{{image.images.url}}"
+              alt="First slide"
+            />
+          </div>
+          {% endfor %}
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleControls"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleControls"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+    <div class="col-11 col-md-3 ml-md-4 p-3 text-center" id="MissionTime">
+      <div class="row justify-content-center">
+        <div class="col-4 col-md-12" id="SingleMissionFlag">
+          <h1>
+            <img src="/static/assets/social/rocket.png" alt="" />
+          </h1>
+          <h4>{{mission.mission_date}}</h4>
+        </div>
+        <div class="col-4 col-md-12" id="SingleMissionFlag">
+          <h1>
+            <img src="/static/assets/social/pin.png" alt="" />
+          </h1>
+          <h4>{{mission.mission_site}}</h4>
+        </div>
+        <div class="col-4 col-md-12" id="SingleMissionFlag">
+          <img src="/static/assets/Social/yt.png" alt="" />
+          <h4><a href="{{mission.mission_YT_link}}">Watch the Launch</a></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center" id="MissionContent">
+    <div class="col-12 col-md-12 text-center">
+      <h2>{{mission.mission_title}}</h2>
+    </div>
+    <div class="col-12 col-md-12 text-center">
+      <p>{{mission.mission_content}}</p>
+    </div>
+
+    <div class="col col-md-3 mInfo missionRocket">
+      <h5>Launch Vehicle</h5>
+      <h6>{{mission.mission_lv}}</h6>
+      <h6><a href="{{mission.mission_lv_link}}">Know More</a></h6>
+    </div>
+    <div class="col col-md-3 mInfo missionCraft">
+      <h5>Payload</h5>
+      <h6>{{mission.mission_payload}}</h6>
+      <h6><a href="{{mission.mission_payload_link}}">Know More</a></h6>
+    </div>
+    <div class="col col-md-3 mInfo missionCraft">
+      <h5>Mission Profile</h5>
+      <h6>Feature under development</h6>
+    </div>
+  </div>
+
+  <div class="container" id="MissionContent">
+    <div class="row justify-content-center">
+      <div class="row"><h3>Mission Gallery</h3></div>
+    </div>
+    <div class="row justify-content-center">
+      {% for image in images %}
+      <div class="col-5 col-md-3" id="SingleImage">
+        <img src="{{image.images.url}}" alt="" />
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="container" id="MissionContent">
+    <div class="row justify-content-center">
+      <h3>Useful Mission Links</h3>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col col-md-3" id="LinkCard">
+        <h5>{{mission.mission_link1_Name}}</h5>
+        <a href="{{mission.mission_link1}}"><h6>Know More</h6></a>
+      </div>
+      <div class="col col-md-3" id="LinkCard">
+        <h5>{{mission.mission_link2_Name}}</h5>
+        <a href="{{mission.mission_link2}}"><h6>Know More</h6></a>
+      </div>
+      <div class="col col-md-3" id="LinkCard">
+        <h5>{{mission.mission_link3_Name}}</h5>
+        <a href="{{mission.mission_link3}}"><h6>Know More</h6></a>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  </div>
+</div>
+{% endblock %}

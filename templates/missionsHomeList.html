@@ -1,0 +1,46 @@
+{% extends 'base.html' %} {% block script %}<link
+  rel="stylesheet"
+  href="/static/css/style.css"
+/>{% endblock script %} {%block title %}ISRO LEO Missions{% endblock title %}
+{%block body %}
+<div class="container">
+  <div class="row justify-content-center mb-5">
+    <h1><span class="badge">ISRO {{type}} Missions</span></h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row justify-content-center my-5">
+    {% for mission in missions %}
+    <div class="col-12 col-md-4" id="CardColumn">
+      <div class="card" id="missionTempCard">
+        <img
+          class="card-img-top"
+          src="/media/{{mission.post_thumbnail}}"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{mission.mission_title}}</h5>
+          <p style="font-size: 12px">
+            <i class="fas fa-rocket"></i><b> {{mission.mission_date}} </b>
+            <i class="fas fa-map-marker-alt"></i
+            ><b> {{mission.mission_site}}</b>
+          </p>
+          <p class="card-text" style="font-size: 15px">
+            {{mission.mission_content}}
+          </p>
+        </div>
+        <a
+          href="{{mission.mission_code}}"
+          class="btn btn-primary btn-block mt-4 py-3"
+          style="border-radius: 0px 0px 20px 20px"
+          id="knowMoreBtn"
+          >Know More</a
+        >
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock body %}
