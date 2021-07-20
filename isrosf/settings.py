@@ -26,7 +26,7 @@ SECRET_KEY = '3n2rx(gnxn^zul&c3ba&u&o+y^qrfrs^j7o68$$rz@w1%v2vs)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['isrospaceflight.herokuapp.com']
 
 
 # Application definition
