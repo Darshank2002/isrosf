@@ -9,11 +9,11 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container-fluid">
   <div class="row justify-content-center my-5">
     {% for mission in missions %}
-    <div class="col-12 col-md-4" id="CardColumn">
-      <div class="card" id="missionTempCard">
+    <div class="col-11 col-md-4" id="CardColumn">
+      <div class="card mx-auto" id="missionTempCard">
         <img
           class="card-img-top"
           src="/media/{{mission.post_thumbnail}}"

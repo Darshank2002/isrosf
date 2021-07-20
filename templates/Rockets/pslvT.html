@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/static/css/pslv.css" />
+    
     <title>{{rocket.rocket_name}}</title>
   </head>
 
@@ -20,21 +21,19 @@
       id="mainBG"
       style="background-image: url(/media/{{rocket.rocket_thumb}})"
     >
+
       <div class="inner-section justify-content-center">
-        <h1
-          class="animate"
+        <h1 class="animate"
           style="
             visibility: inherit;
             opacity: 1;
-            transform: translate3d(0px, 0px, 0px);
-          "
-        >
+            transform: translate3d(0px, 0px, 0px);">
           {{rocket.rocket_name}}
         </h1>
         <h3>{{rocket.rocket_subheading}}</h3>
       </div>
 
-      <div class="row justify-content-center" id="rocketStats">
+      <div class="row justify-content-center mt-5" id="rocketStats">
         <div class="col-3 col-md-2 text-center mx-md-4">
           <h1>{{rocket.rocket_stat1_value}}</h1>
           <h3>{{rocket.rocket_stat1_name}}</h3>
@@ -385,8 +384,11 @@
 
       <div class="container py-5">
         <div class="row justify-content-center">
-          <h2 class="p-5" style="text-transform: uppercase">
-            {{rocket.rocket_code}} Latest Launch
+          <h2 class="py-5" style="text-transform: uppercase">
+            {{rocket.rocket_code}}
+          </h2>
+            <h2 class="py-5 px-2" >
+            Latest Launch
           </h2>
           <div class="video-container">{{rocket.rocket_launchVideo|safe}}</div>
         </div>

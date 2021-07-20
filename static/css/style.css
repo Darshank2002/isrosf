@@ -3,6 +3,7 @@ Pumpkin (#F47216) and Rich Electric Blue (#0E88D3). */
 
 html {
     scroll-behavior: smooth;
+
 }
 
 html,
@@ -178,7 +179,7 @@ a#right {
 }
 
 
-@media only screen and (max-width: 600px) {}
+
 
 
 #CardColumn {
@@ -266,18 +267,17 @@ a#right {
 
 
 #MissionContent #SingleImage img {
-    max-height: inherit;
-    width: inherit;
+    height: 250px;
+    width: 250px;
     object-fit: cover;
     border-radius: 20px;
-
 
 }
 
 #MissionContent #SingleImage img:hover {
 
-    height: inherit;
-    width: inherit;
+    height: 250px;
+    width: 250px;
     object-fit: cover;
     border-radius: 20px;
 }
@@ -339,6 +339,30 @@ a#right {
 
 
 @media only screen and (max-width: 768px) {
+    #nav a {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    a#left {
+        width: 150px;
+        height: 50px;
+        background: linear-gradient(270deg, #6CB5FA 0%, #0658A4 100%);
+        border: 3px solid #8DC7FC;
+        border-radius: 10px;
+    }
+
+    a#right {
+        width: 150px;
+        height: 50px;
+        background: linear-gradient(270deg, #0658A4 0%, #6CB5FA 100%);
+        border: 3px solid #8DC7FC;
+        box-sizing: border-box;
+        border-radius: 10px;
+    }
+
+
+
     #stats h1 {
         font-size: 10vw;
         color: #00466b;
@@ -432,10 +456,20 @@ a#right {
     }
 
     #MissionContent #SingleImage {
-        padding: 5px;
+        padding: 0px;
         margin: 5px;
-        height: 100px;
-        width: 100px;
+        max-height: 250px;
+        max-width: 250px;
+        text-align: center;
+
+
+    }
+
+
+    #MissionContent #SingleImage img {
+        height: 130px;
+        width: 130px;
+        object-fit: cover;
 
 
     }

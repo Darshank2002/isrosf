@@ -2,39 +2,42 @@ html {
     scroll-behavior: smooth;
 }
 
-html,body{
+html,
+body {
     /* background-color: rgb(152, 214, 255); */
     background-color: rgba(0, 0, 0, 0.452);
     background-image: url("../assets/bg2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    color:blanchedalmond;
+    color: blanchedalmond;
 }
 
 
 
 
 @media only screen and (max-width: 768px) {
-    html,body{
+
+    html,
+    body {
         /* background-color: rgb(152, 214, 255); */
         background-image: url("../assets/bg2.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-    }  
+    }
 }
 
-.badge{
-    background: rgb(252,229,143);
-    background: linear-gradient(43deg, rgba(252,229,143,1) 20%, rgba(252,198,0,1) 86%);
+.badge {
+    background: rgb(252, 229, 143);
+    background: linear-gradient(43deg, rgba(252, 229, 143, 1) 20%, rgba(252, 198, 0, 1) 86%);
 }
 
-h1{
+h1 {
     font-size: 3vw;
     color: #00466b;
 }
 
-.col.col-md-2{
+.col.col-md-2 {
     margin: 30px;
     padding: 20px;
 
@@ -43,7 +46,7 @@ h1{
     width: auto;
 }
 
-.col.col-md-8{
+.col.col-md-8 {
     margin: 30px;
     padding: 50px;
 
@@ -54,7 +57,7 @@ h1{
     width: auto;
 }
 
-#rocketCard #rocketInfo .col-5.col-md-2{
+#rocketCard #rocketInfo .col-5.col-md-2 {
     margin: 15px 5px;
     padding: 50px;
     background-color: rgb(255, 255, 255);
@@ -62,18 +65,25 @@ h1{
 
 }
 
-#allRockets img{
-    margin: 10px auto;
+#allRockets svg {
+    margin: 10px;
     border-radius: 20px;
     width: 100%;
     max-width: 800px;
     height: auto;
 }
 
-@media only screen and (max-width: 768px) { 
-    h1{
+#allRockets h4 {
+    font-size: 2vw;
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
         font-size: 8vw;
         color: #00466b;
     }
- }
 
+    #allRockets h4 {
+        font-size: 5vw;
+    }
+}
